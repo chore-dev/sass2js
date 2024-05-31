@@ -1,0 +1,71 @@
+{
+  "name": "@chore-dev/sass2js",
+  "version": "0.0.1",
+  "description": "A Sass & JS library that converts Sass list & map to JS array & object.",
+  "keywords": [
+    "CSS",
+    "JavaScript",
+    "Sass",
+    "SCSS",
+    "TypeScript"
+  ],
+  "type": "module",
+  "exports": "./dist/index.js",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "release": "release-it --config .release-it.json",
+    "// ESLint": "---------- ---------- ---------- ---------- ----------",
+    "eslint": "yarn prettier:fix; yarn eslint:no-glob .",
+    "eslint:no-glob": "eslint --cache --color --config eslint.config.js",
+    "eslint:fix": "yarn eslint --fix --quiet",
+    "eslint:fix:no-glob": "yarn eslint:no-glob --fix --quiet",
+    "// Prettier": "---------- ---------- ---------- ---------- ----------",
+    "prettier": "yarn prettier:base -c",
+    "prettier:base": "yarn prettier:base:no-glob './**/*.{?(s)css,html,js?(x),ts?(x),json}'",
+    "prettier:base:no-glob": "prettier --cache --config .prettier.config.js --ignore-path .prettierignore --ignore-unknown",
+    "prettier:fix": "yarn prettier:base -w",
+    "prettier:fix:no-glob": "yarn prettier:base:no-glob -w"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "8",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/eslint__js": "8",
+    "@types/lint-staged": "^13.3.0",
+    "eslint": "8",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "globals": "^15.3.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "prettier": "^3.2.5",
+    "release-it": "^17.3.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0"
+  },
+  "author": "Chore Team",
+  "contributors": [
+    {
+      "name": "Issac Li",
+      "email": "issac.li.523@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/chore-dev/sass2js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chore-dev/sass2js"
+  },
+  "bugs": {
+    "url": "https://github.com/chore-dev/sass2js/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "Apache-2.0"
+}
