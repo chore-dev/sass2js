@@ -16,6 +16,7 @@
     "dist"
   ],
   "scripts": {
+    "demo": "yarn link && cd ./demo; [ ! -d \"./node_modules\" ] && yarn; yarn link @chore-dev/sass2js && yarn start",
     "prepare": "husky",
     "release": "release-it --config .release-it.json",
     "// ESLint": "---------- ---------- ---------- ---------- ----------",
