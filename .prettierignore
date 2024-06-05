@@ -5,11 +5,8 @@ node_modules/
 .composer.bak
 
 # Build output directory
-/coverage
 /build
-/bundle
-/dist
-/out
+/lib/js
 
 # Build output files
 .eslintcache

@@ -1,3 +1,4 @@
+import parser from '@chore-dev/sass2js/lib/js';
 import { useEffect } from 'react';
 
 import variables from './export.module.scss';
@@ -9,7 +10,7 @@ const unquoted = decoded.replace(/^'|'$/g, '');
 const parsed = JSON.parse(unquoted);
 
 function App() {
-  useEffect(() => c.log(parsed), []);
+  useEffect(() => c.log(parsed, parser), []);
 
   return (
     <div>

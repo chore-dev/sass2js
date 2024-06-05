@@ -16,6 +16,7 @@
     "lib"
   ],
   "scripts": {
+    "build": "rollup ./src/index.ts --config rollup.config.js",
     "demo": "yarn link && cd ./demo; [ ! -d \"./node_modules\" ] && yarn; yarn link @chore-dev/sass2js && yarn start",
     "prepare": "husky",
     "release": "release-it --config .release-it.json",
@@ -37,6 +38,8 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "8",
     "@release-it/conventional-changelog": "^8.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint__js": "8",
     "@types/lint-staged": "^13.3.0",
     "eslint": "8",
@@ -48,6 +51,8 @@
     "lint-staged": "^15.2.5",
     "prettier": "^3.3.0",
     "release-it": "^17.3.0",
+    "rollup": "^4.18.0",
+    "rollup-plugin-uglify": "^6.0.4",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.12.0"
   },

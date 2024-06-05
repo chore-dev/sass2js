@@ -12,18 +12,16 @@ const config = tsESLint.config(
       // Backup files
       '.composer.bak/',
       // Build output directory
-      'coverage/',
       'build/',
-      'bundle/',
-      'dist/',
-      'out/',
+      'lib/js/',
       // Cache files
       '.eslintcache',
       // Config files
       '.prettier.config.js',
       'commitlint.config.js',
       'eslint.config.js',
-      'lint-staged.config.js'
+      'lint-staged.config.js',
+      'rollup.config.js'
     ]
   },
   esLint.configs.recommended,
