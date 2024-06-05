@@ -1,0 +1,18 @@
+@use 'sass:meta';
+
+@use './utilities/_string';
+
+@function encode($variable) {
+  $stringified: string.stringify($variable);
+
+  $result: string.replace($stringified, '%', '%25');
+  $result: string.replace($result, '\\', '%5C%5C');
+  $result: string.replace($result, '"', '%5C%22');
+  $result: string.replace($result, "'", '%27');
+
+  @return '"#{$result}"';
+}
+
+@function parser($variable) {
+  @return encode($variable);
+}

@@ -1,0 +1,5 @@
+@use './_string';
+
+@function parser($variable) {
+  @return string.parser('[object Function]');
+}

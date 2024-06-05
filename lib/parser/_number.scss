@@ -1,0 +1,7 @@
+@use 'sass:math';
+
+@use './_string';
+
+@function parser($variable) {
+  @return if(math.is-unitless($variable), $variable, string.parser($variable));
+}

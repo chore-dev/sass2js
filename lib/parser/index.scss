@@ -1,0 +1,35 @@
+@use 'sass:meta';
+
+@use './utilities/_string' as string-utilities;
+@use './_arglist';
+@use './_bool';
+@use './_color';
+@use './_function';
+@use './_list';
+@use './_map';
+// NOTE: Mark n as alias of _null, seems null is a reserved keyword in SASS
+@use './_null' as n;
+@use './_number';
+@use './_string';
+
+@function parser($variable) {
+  @if (meta.type-of($variable) == 'arglist') {
+    @return arglist.parser($variable, meta.get-function('parser'));
+  } @else if (meta.type-of($variable) == 'bool') {
+    @return bool.parser($variable);
+  } @else if (meta.type-of($variable) == 'color') {
+    @return color.parser($variable);
+  } @else if (meta.type-of($variable) == 'function') {
+    @return function.parser($variable);
+  } @else if (meta.type-of($variable) == 'list') {
+    @return list.parser($variable, meta.get-function('parser'));
+  } @else if (meta.type-of($variable) == 'map') {
+    @return map.parser($variable, meta.get-function('parser'));
+  } @else if (meta.type-of($variable) == 'null') {
+    @return n.parser($variable);
+  } @else if (meta.type-of($variable) == 'number') {
+    @return number.parser($variable);
+  } @else if (meta.type-of($variable) == 'string') {
+    @return string.parser($variable);
+  }
+}

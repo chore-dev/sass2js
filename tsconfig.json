@@ -12,7 +12,7 @@
     "storybook-static",
     "out"
   ],
-  "include": ["**/*.d.ts", "**/*.js", "**/*.ts", "@types", "types"],
+  "include": ["**/*.d.ts", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "@types", "types"],
   "compilerOptions": {
     "skipLibCheck": true,
     "declaration": true,
@@ -30,6 +30,7 @@
     "allowJs": true,
     "checkJs": true,
     "experimentalDecorators": true,
+    "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
     "target": "esnext",
     "allowArbitraryExtensions": true,

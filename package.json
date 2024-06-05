@@ -10,10 +10,10 @@
     "TypeScript"
   ],
   "type": "module",
-  "exports": "./dist/index.js",
-  "main": "./dist/index.js",
+  "exports": "./index.scss",
+  "main": "./index.scss",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "demo": "yarn link && cd ./demo; [ ! -d \"./node_modules\" ] && yarn; yarn link @chore-dev/sass2js && yarn start",
@@ -26,7 +26,7 @@
     "eslint:fix:no-glob": "yarn eslint:no-glob --fix --quiet",
     "// Prettier": "---------- ---------- ---------- ---------- ----------",
     "prettier": "yarn prettier:base -c",
-    "prettier:base": "yarn prettier:base:no-glob './**/*.{?(s)css,html,js?(x),ts?(x),json}'",
+    "prettier:base": "yarn prettier:base:no-glob './**/*.{?(s)css,html,js,ts,json}'",
     "prettier:base:no-glob": "prettier --cache --config .prettier.config.js --ignore-path .prettierignore --ignore-unknown",
     "prettier:fix": "yarn prettier:base -w",
     "prettier:fix:no-glob": "yarn prettier:base:no-glob -w"
@@ -42,13 +42,14 @@
     "eslint": "8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.2",
     "globals": "^15.3.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.5",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.0",
     "release-it": "^17.3.0",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.11.0"
+    "typescript-eslint": "^7.12.0"
   },
   "author": "Chore Team",
   "contributors": [

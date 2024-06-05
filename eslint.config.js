@@ -1,5 +1,7 @@
 import esLint from '@eslint/js';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
+// @ts-ignore, NOTE: There is no such thing as @types/eslint-plugin-react
+import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
 import globals from 'globals';
 import tsESLint from 'typescript-eslint';
 import prettierConfig from './.prettier.config.js';
@@ -28,8 +30,10 @@ const config = tsESLint.config(
   ...tsESLint.configs.recommended,
   prettierRecommended,
   {
-    files: ['**/*.{js,ts}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    ...reactRecommended,
     languageOptions: {
+      ...reactRecommended.languageOptions,
       globals: {
         ...globals.browser,
         ...globals.es2021,
@@ -39,9 +43,12 @@ const config = tsESLint.config(
       }
     },
     rules: {
+      ...reactRecommended.rules,
       'import/no-duplicates': 'off',
       'no-console': ['error', { allow: ['error', 'warn'] }],
       'prettier/prettier': ['error', prettierConfig],
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/ban-ts-comment': [
         'error',
         {

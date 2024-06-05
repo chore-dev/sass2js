@@ -1,0 +1,20 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+
+@function desensitizeKey($key) {
+  @return '"#{if(type-of($key) == 'null', 'null', $key)}"';
+}
+
+@function parser($variable, $parser) {
+  $content: '{';
+
+  $count: list.length(map.keys($variable));
+  @each $key, $value in $variable {
+    $count: $count - 1;
+    $content: "#{$content}#{desensitizeKey($key)}:#{meta.call($parser, $value)}#{if($count > 0, ',', '')}";
+  }
+
+  @return '#{$content}}';
+}

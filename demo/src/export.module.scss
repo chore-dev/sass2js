@@ -1,0 +1,81 @@
+@use '@chore-dev/sass2js' as sass2js;
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+
+@function get-arglist($arglist...) {
+  @return $arglist;
+}
+
+$map-example: (
+  boolean-false: false,
+  boolean-false-quoted: 'false',
+  boolean-true: true,
+  boolean-true-quoted: 'true',
+  color: black,
+  color-quoted: 'black',
+  color-hex: #000000,
+  color-hex-quoted: '#000000',
+  color-hsl: hsl(0, 0%, 0%),
+  color-hsl-quoted: 'hsl(0, 0%, 0%)',
+  color-hsla: hsl(0, 0%, 0%, 1),
+  color-hsla-quoted: 'hsl(0, 0%, 0%, 1)',
+  color-rgb: rgb(0, 0, 0),
+  color-rgb-quoted: 'rgb(0, 0, 0)',
+  color-rgba: rgba(0, 0, 0, 1),
+  color-rgba-quoted: 'rgba(0, 0, 0, 1)',
+  function: meta.get-function('get-arglist'),
+  null: null,
+  null-quoted: 'null',
+  number: 1,
+  number-e: 5.2e3,
+  number-e-quoted: '5.2e3',
+  number-float: 0.5,
+  number-float-quoted: '0.5',
+  number-quoted: '1',
+  number-with-unit: 1px,
+  number-with-unit-quoted: '1px',
+  string: string,
+  string-quoted: 'string',
+  string-1: '%',
+  string-2: '#',
+  string-3: '!',
+  string-4: '$',
+  string-5: '&amp;',
+  string-6: '(',
+  string-7: ')',
+  string-8: "'",
+  string-9: '"',
+  string-10: '*',
+  string-11: '+',
+  string-12: ',',
+  string-13: '/',
+  string-14: ':',
+  string-15: ';',
+  string-16: '=',
+  string-17: '?',
+  string-18: '@',
+  string-19: '[',
+  string-20: ']',
+  string-21: '◐',
+  string-22: '&',
+  string-23: ' ',
+  string-24: '\\'
+);
+
+$list-example: list.append(map.values($map-example), $map-example);
+
+:export {
+  map: sass2js.parser(
+    map.merge(
+      $map-example,
+      (
+        arglist: get-arglist($list-example...),
+        list: $list-example,
+        map: $map-example
+      )
+    )
+  );
+  null: null;
+  string: 'string';
+}

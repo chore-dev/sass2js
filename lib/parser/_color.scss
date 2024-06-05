@@ -1,0 +1,7 @@
+@use 'sass:meta';
+
+@use './_string';
+
+@function parser($variable) {
+  @return string.parser($variable);
+}

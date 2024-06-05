@@ -1,0 +1,16 @@
+@use 'sass:string';
+
+@function replace($string, $target, $replace) {
+  $_index: string.index($string, $target);
+
+  @if $_index {
+    @return string.slice($string, 1, $_index - 1) + $replace +
+      replace(string.slice($string, $_index + string.length($target)), $target, $replace);
+  }
+
+  @return $string;
+}
+
+@function stringify($variable) {
+  @return $variable + '';
+}

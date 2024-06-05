@@ -1,0 +1,5 @@
+@use './_list';
+
+@function parser($variable, $parser) {
+  @return list.parser($variable, $parser);
+}

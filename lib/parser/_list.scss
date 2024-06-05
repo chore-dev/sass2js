@@ -1,0 +1,14 @@
+@use 'sass:list';
+@use 'sass:meta';
+
+@function parser($variable, $parser) {
+  $content: '[';
+
+  $count: list.length($variable);
+  @each $value in $variable {
+    $count: $count - 1;
+    $content: "#{$content}#{meta.call($parser, $value)}#{if($count > 0, ',', '')}";
+  }
+
+  @return '#{$content}]';
+}
