@@ -1,5 +1,5 @@
 {
-  "exclude": [".composer.bak", "node_modules", "build", "lib/js"],
+  "exclude": [".composer.bak", "node_modules", "build", "lib/bin", "lib/js"],
   "include": ["**/*.d.ts", "**/*.js", "**/*.ts", "types"],
   "compilerOptions": {
     "skipLibCheck": true,
