@@ -4,13 +4,27 @@ import typescript from '@rollup/plugin-typescript';
 //                   add it back when it is available
 import { uglify } from 'rollup-plugin-uglify';
 
-export default {
-  input: './src/index.ts',
-  output: {
-    compact: true,
-    file: './lib/js/index.js',
-    format: 'esm',
-    sourcemap: false
+/** @type {import("rollup").RollupOptions[]} */
+export default [
+  {
+    input: './src/index.ts',
+    output: {
+      compact: true,
+      file: './lib/js/index.js',
+      format: 'esm',
+      sourcemap: false
+    },
+    plugins: [json(), typescript(), uglify()]
   },
-  plugins: [json(), typescript(), uglify()]
-};
+  {
+    input: './src/generator/index.ts',
+    output: {
+      compact: true,
+      file: './lib/bin/index.js',
+      format: 'esm',
+      sourcemap: false
+    },
+    plugins: [json(), typescript(), uglify()],
+    external: ['chalk', 'command-line-args', 'json-to-ts', 'node:fs', 'path', 'sass']
+  }
+];
