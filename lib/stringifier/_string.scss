@@ -13,6 +13,6 @@
   @return '"#{$result}"';
 }
 
-@function parser($variable) {
+@function stringifier($variable) {
   @return encode($variable);
 }

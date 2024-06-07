@@ -1,5 +1,5 @@
 @use './_list';
 
-@function parser($variable, $parser) {
-  @return list.parser($variable, $parser);
+@function stringifier($variable, $parser) {
+  @return list.stringifier($variable, $parser);
 }

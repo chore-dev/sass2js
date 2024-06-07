@@ -1,5 +1,5 @@
 @use './_string';
 
-@function parser($variable) {
-  @return string.parser('[object Function]');
+@function stringifier($variable) {
+  @return string.stringifier('[object Function]');
 }

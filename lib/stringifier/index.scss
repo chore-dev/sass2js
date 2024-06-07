@@ -14,22 +14,22 @@
 
 @function stringifier($variable) {
   @if (meta.type-of($variable) == 'arglist') {
-    @return arglist.parser($variable, meta.get-function('stringifier'));
+    @return arglist.stringifier($variable, meta.get-function('stringifier'));
   } @else if (meta.type-of($variable) == 'bool') {
-    @return bool.parser($variable);
+    @return bool.stringifier($variable);
   } @else if (meta.type-of($variable) == 'color') {
-    @return color.parser($variable);
+    @return color.stringifier($variable);
   } @else if (meta.type-of($variable) == 'function') {
-    @return function.parser($variable);
+    @return function.stringifier($variable);
   } @else if (meta.type-of($variable) == 'list') {
-    @return list.parser($variable, meta.get-function('parser'));
+    @return list.stringifier($variable, meta.get-function('stringifier'));
   } @else if (meta.type-of($variable) == 'map') {
-    @return map.parser($variable, meta.get-function('parser'));
+    @return map.stringifier($variable, meta.get-function('stringifier'));
   } @else if (meta.type-of($variable) == 'null') {
-    @return n.parser($variable);
+    @return n.stringifier($variable);
   } @else if (meta.type-of($variable) == 'number') {
-    @return number.parser($variable);
+    @return number.stringifier($variable);
   } @else if (meta.type-of($variable) == 'string') {
-    @return string.parser($variable);
+    @return string.stringifier($variable);
   }
 }

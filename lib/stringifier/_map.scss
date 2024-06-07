@@ -9,7 +9,7 @@ $_identifier: '"sass2js:json":true';
   @return '"#{if(type-of($key) == 'null', 'null', $key)}"';
 }
 
-@function parser($variable, $parser) {
+@function stringifier($variable, $parser) {
   $content: '{';
 
   $count: list.length(map.keys($variable));

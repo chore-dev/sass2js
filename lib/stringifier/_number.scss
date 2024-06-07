@@ -2,6 +2,6 @@
 
 @use './_string';
 
-@function parser($variable) {
-  @return if(math.is-unitless($variable), $variable, string.parser($variable));
+@function stringifier($variable) {
+  @return if(math.is-unitless($variable), $variable, string.stringifier($variable));
 }

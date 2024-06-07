@@ -3,7 +3,7 @@
 
 $_identifier: '"sass2js:json"';
 
-@function parser($variable, $parser) {
+@function stringifier($variable, $parser) {
   $content: '[';
 
   $count: list.length($variable);
