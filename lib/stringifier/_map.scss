@@ -3,6 +3,8 @@
 @use 'sass:meta';
 @use 'sass:string';
 
+$_identifier: '"sass2js:json":true';
+
 @function desensitizeKey($key) {
   @return '"#{if(type-of($key) == 'null', 'null', $key)}"';
 }
@@ -16,5 +18,5 @@
     $content: "#{$content}#{desensitizeKey($key)}:#{meta.call($parser, $value)}#{if($count > 0, ',', '')}";
   }
 
-  @return '#{$content}}';
+  @return '#{$content},#{$_identifier}}';
 }

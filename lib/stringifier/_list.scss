@@ -1,6 +1,8 @@
 @use 'sass:list';
 @use 'sass:meta';
 
+$_identifier: '"sass2js:json"';
+
 @function parser($variable, $parser) {
   $content: '[';
 
@@ -10,5 +12,5 @@
     $content: "#{$content}#{meta.call($parser, $value)}#{if($count > 0, ',', '')}";
   }
 
-  @return '#{$content}]';
+  @return '#{$content},#{$_identifier}]';
 }

@@ -12,9 +12,9 @@
 @use './_number';
 @use './_string';
 
-@function parser($variable) {
+@function stringifier($variable) {
   @if (meta.type-of($variable) == 'arglist') {
-    @return arglist.parser($variable, meta.get-function('parser'));
+    @return arglist.parser($variable, meta.get-function('stringifier'));
   } @else if (meta.type-of($variable) == 'bool') {
     @return bool.parser($variable);
   } @else if (meta.type-of($variable) == 'color') {
