@@ -37,6 +37,7 @@ const config = tsESLint.config(
         ...globals.browser,
         ...globals.es2021,
         ...globals.jest,
+        ...globals.node,
         ...globals.serviceworker,
         ...globals.worker
       }
