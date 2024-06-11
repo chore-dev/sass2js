@@ -30,7 +30,6 @@
   "scripts": {
     "build": "rollup --config rollup.config.js",
     "build:watch": "nodemon --watch ./src --ext ts --exec yarn build",
-    "demo": "yarn link && cd ./demo; [ ! -d \"./node_modules\" ] && yarn; yarn link @chore-dev/sass2js && yarn start",
     "prepare": "husky",
     "release": "release-it --config .release-it.json",
     "// ESLint": "---------- ---------- ---------- ---------- ----------",
