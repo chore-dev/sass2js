@@ -1,6 +1,6 @@
 import { SassRootExport } from '../../types';
 
-import { CHECKSUM, SASS2JS_JSON } from './constants';
+import { CHECKSUM, SASS2TS_JSON } from './constants';
 
 export const canParseToNumber = (input: string): input is `${number}` => {
   return !input.includes(' ') && !isNaN(Number(input));
@@ -18,6 +18,6 @@ export const isSassRootExport = (input: unknown): input is SassRootExport => {
 
 export const isString = (input: unknown): input is string => typeof input === 'string';
 
-export const isStringifiedSass2JsJson = (input: unknown): input is string => {
-  return isString(input) && input.includes(SASS2JS_JSON);
+export const isStringifiedSass2TsJson = (input: unknown): input is string => {
+  return isString(input) && input.includes(SASS2TS_JSON);
 };

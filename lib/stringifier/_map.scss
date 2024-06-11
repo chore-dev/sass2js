@@ -3,7 +3,7 @@
 @use 'sass:meta';
 @use 'sass:string';
 
-$_identifier: '"sass2js:json":true';
+$_identifier: '"sass2ts:json":true';
 
 @function desensitizeKey($key) {
   @return '"#{if(type-of($key) == 'null', 'null', $key)}"';

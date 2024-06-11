@@ -1,9 +1,9 @@
 import { SassRootExport } from '../../types';
 import { CHECKSUM } from '../utilities/constants';
-import { isString, isStringifiedSass2JsJson } from '../utilities/is';
+import { isString, isStringifiedSass2TsJson } from '../utilities/is';
 import { transpile, unescape } from '../utilities/values';
 
-import massageSass2JsJson from './sass2jsJson';
+import massageSass2TsJson from './sass2tsJson';
 
 function massageSassExportRoot<Output = unknown>(input: SassRootExport, preserveString: boolean) {
   const output: Record<string, unknown> = {};
@@ -15,7 +15,7 @@ function massageSassExportRoot<Output = unknown>(input: SassRootExport, preserve
 
       if (isString(value)) value = unescape(value);
       if (isString(value) && !preserveString) value = transpile(value);
-      if (isStringifiedSass2JsJson(value)) value = massageSass2JsJson(value, preserveString);
+      if (isStringifiedSass2TsJson(value)) value = massageSass2TsJson(value, preserveString);
 
       output[key] = value;
     }

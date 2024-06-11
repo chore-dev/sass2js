@@ -1,1 +1,1 @@
-# sass2js
+# Sass2Ts

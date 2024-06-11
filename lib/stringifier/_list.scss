@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:meta';
 
-$_identifier: '"sass2js:json"';
+$_identifier: '"sass2ts:json"';
 
 @function stringifier($variable, $parser) {
   $content: '[';
