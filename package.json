@@ -1,7 +1,7 @@
 {
   "name": "@chore-dev/sass2ts",
   "version": "0.0.1",
-  "description": "A Sass & JS library that converts Sass list & map to JS array & object.",
+  "description": "Bridge Sass & JS! Easily exporting Sass variables and parser them to typed typescript variables for better DX.",
   "keywords": [
     "CSS",
     "JavaScript",
@@ -10,6 +10,7 @@
     "TypeScript"
   ],
   "type": "module",
+  "bin": "./bin/sass2ts.js",
   "exports": {
     ".": {
       "sass": "./index.scss"
@@ -25,7 +26,8 @@
   },
   "main": "./index.scss",
   "files": [
-    "lib"
+    "lib",
+    "types"
   ],
   "scripts": {
     "build": "rollup --config rollup.config.js",
