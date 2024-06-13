@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/chore-dev/sass2ts/compare/v1.0.3...v1.0.4) (2024-06-13)
+
+### Restructured
+
+- replaced sass.NodePackageImport with FileImporter
+  ([78f691f](https://github.com/chore-dev/sass2ts/commit/78f691fec7aa125039cdc3f2e93cd2a7ae0af1ea))
+
 ## [1.0.3](https://github.com/chore-dev/sass2ts/compare/v1.0.2...v1.0.3) (2024-06-13)
 
 ### Bug Fixes
