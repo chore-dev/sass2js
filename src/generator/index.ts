@@ -91,6 +91,7 @@ if (!existsSync(configFile)) {
     ]);
 
     const compiled = sass.compile(inputPath, {
+      importers: [new sass.NodePackageImporter()],
       style: 'expanded'
     });
 
