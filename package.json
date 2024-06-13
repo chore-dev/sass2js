@@ -1,6 +1,6 @@
 {
   "name": "@chore-dev/sass2ts",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Bridge Sass & JS! Easily exporting Sass variables and parser them to typed typescript variables for better DX.",
   "keywords": [
     "CSS",
