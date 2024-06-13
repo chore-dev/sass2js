@@ -4,6 +4,7 @@ import json2ts from 'json-to-ts';
 import { existsSync, writeFileSync } from 'node:fs';
 import { resolve } from 'path';
 import * as sass from 'sass';
+import { pathToFileURL } from 'url';
 
 import { Sass2TsConfig } from '../../types';
 import massageSassExportRoot from '../parser/sassExportRoot';
@@ -91,7 +92,14 @@ if (!existsSync(configFile)) {
     ]);
 
     const compiled = sass.compile(inputPath, {
-      importers: [new sass.NodePackageImporter()],
+      importers: [
+        {
+          findFileUrl(url) {
+            if (!url.startsWith('~')) return null;
+            return new URL(url.substring(1), pathToFileURL('node_modules'));
+          }
+        }
+      ],
       style: 'expanded'
     });
 
