@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/chore-dev/sass2ts/compare/v1.0.4...v1.0.5) (2024-06-13)
+
+### Restructured
+
+- implementing own importer
+  ([e53804e](https://github.com/chore-dev/sass2ts/commit/e53804efa079ed4c6fc11400938ba75cf89863f7))
+
 ## [1.0.4](https://github.com/chore-dev/sass2ts/compare/v1.0.3...v1.0.4) (2024-06-13)
 
 ### Restructured
