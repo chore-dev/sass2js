@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/chore-dev/sass2ts/compare/v1.0.5...v1.0.6) (2024-06-13)
+
+### Bug Fixes
+
+- fixed parser output type error
+  ([bda43f9](https://github.com/chore-dev/sass2ts/commit/bda43f924eb1990a08359930e56a583f69e09aa6))
+
 ## [1.0.5](https://github.com/chore-dev/sass2ts/compare/v1.0.4...v1.0.5) (2024-06-13)
 
 ### Restructured
