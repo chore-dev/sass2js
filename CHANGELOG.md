@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/chore-dev/sass2ts/compare/v1.0.0...v1.0.1) (2024-06-13)
+
+### Bug Fixes
+
+- fixed incorrect export
+  ([98b2afe](https://github.com/chore-dev/sass2ts/commit/98b2afe33cbeb403629e52514311825dba990da7))
+
 ## 1.0.0 (2024-06-13)
 
 ### Features
