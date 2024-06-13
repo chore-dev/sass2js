@@ -1,7 +1,7 @@
 import { pascalCase } from 'change-case';
 import commandLineArgs from 'command-line-args';
 import json2ts from 'json-to-ts';
-import { existsSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'path';
 import * as sass from 'sass';
 import { pathToFileURL } from 'url';
@@ -95,8 +95,42 @@ if (!existsSync(configFile)) {
       importers: [
         {
           findFileUrl(url) {
-            if (!url.startsWith('~')) return null;
-            return new URL(url.substring(1), pathToFileURL('node_modules'));
+            const segments = url.split('/');
+
+            let path = 'node_modules';
+            const remainingSegments = [...segments];
+            for (let i = 0; i < segments.length; i++) {
+              const nextPath = `${path}/${segments[i]}`;
+
+              if (existsSync(nextPath)) {
+                path = nextPath;
+                remainingSegments.shift();
+              } else {
+                break;
+              }
+            }
+
+            if (path === 'node_modules') return null;
+
+            const packageJsonDir = `${path}/package.json`;
+            if (remainingSegments.length && existsSync(packageJsonDir)) {
+              const packageJson = JSON.parse(readFileSync(packageJsonDir, 'utf8'));
+
+              if (!packageJson || !packageJson.exports) return null;
+
+              const target = remainingSegments.join('/');
+              const exports = packageJson.exports;
+
+              for (const key in exports) {
+                if (new RegExp(`^(?:./)?${target}/?$`).test(key) && exports[key].sass) {
+                  return pathToFileURL(resolve(pathToFileURL(path).pathname, exports[key].sass));
+                }
+              }
+            } else {
+              return pathToFileURL(path);
+            }
+
+            return null;
           }
         }
       ],
