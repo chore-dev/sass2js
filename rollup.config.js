@@ -25,6 +25,6 @@ export default [
       sourcemap: false
     },
     plugins: [json(), typescript(), uglify()],
-    external: ['chalk', 'command-line-args', 'json-to-ts', 'node:fs', 'path', 'sass']
+    external: ['chalk', 'change-case', 'command-line-args', 'json-to-ts', 'node:fs', 'path', 'sass']
   }
 ];

@@ -32,9 +32,8 @@ function sassParser(content: string) {
 
     const colon = _line.indexOf(':');
     const key = _line.slice(0, colon).trim();
-    const value = _line.slice(colon + 1).trim();
 
-    result.entries[key] = value;
+    result.entries[key] = _line.slice(colon + 1).trim();
   });
 
   return result;

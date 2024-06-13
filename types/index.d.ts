@@ -1,4 +1,5 @@
 interface ConfigOptions {
+  implementGetters?: boolean;
   input: string;
   output?: string;
   outputDir: string;
