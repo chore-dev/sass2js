@@ -21,7 +21,7 @@
       "default": "./lib/js/index.js"
     },
     "./stringifier": {
-      "stringifier": "./index.scss"
+      "sass": "./index.scss"
     }
   },
   "main": "./index.scss",
