@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/chore-dev/sass2ts/compare/v1.0.2...v1.0.3) (2024-06-13)
+
+### Bug Fixes
+
+- fixed missing node modules importer when compile sass
+  ([2e34b38](https://github.com/chore-dev/sass2ts/commit/2e34b38f441540d4c3c0ae5e789677e2caaea10c))
+
 ## [1.0.2](https://github.com/chore-dev/sass2ts/compare/v1.0.1...v1.0.2) (2024-06-13)
 
 ### Bug Fixes
