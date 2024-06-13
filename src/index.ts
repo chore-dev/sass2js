@@ -11,7 +11,7 @@ function parser<Output = unknown, Input = unknown>(input: Input, preserveString 
     return massageSass2TsJson<Output>(input, preserveString);
   } else if (isString(input)) {
     const output = unquote(input);
-    return preserveString ? output : (transpile(output) as Output);
+    return (preserveString ? output : transpile(output)) as Output;
   } else {
     return input as unknown as Output;
   }
