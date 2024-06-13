@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/chore-dev/sass2ts/compare/v1.0.1...v1.0.2) (2024-06-13)
+
+### Bug Fixes
+
+- fixed missing file when publish
+  ([1b2b305](https://github.com/chore-dev/sass2ts/commit/1b2b305f20c5f35f892c72d7c5d0f53eab90c2da))
+
 ## [1.0.1](https://github.com/chore-dev/sass2ts/compare/v1.0.0...v1.0.1) (2024-06-13)
 
 ### Bug Fixes
