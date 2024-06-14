@@ -25,6 +25,7 @@
     }
   },
   "main": "./index.scss",
+  "types": "./lib/js/index.d.ts",
   "files": [
     "./index.scss",
     "lib",
