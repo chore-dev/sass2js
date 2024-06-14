@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/chore-dev/sass2ts/compare/v1.0.7...v1.0.8) (2024-06-14)
+
+### Bug Fixes
+
+- fixed relative path missing prefix issue
+  ([b65b058](https://github.com/chore-dev/sass2ts/commit/b65b05872ecc14e23a255f95df2f15fa6a36dd5f))
+
 ## [1.0.7](https://github.com/chore-dev/sass2ts/compare/v1.0.6...v1.0.7) (2024-06-14)
 
 ### Bug Fixes
