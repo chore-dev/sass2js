@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.7](https://github.com/chore-dev/sass2ts/compare/v1.0.6...v1.0.7) (2024-06-14)
+
+### Bug Fixes
+
+- fixed duplicated output file name issue
+  ([57e3a59](https://github.com/chore-dev/sass2ts/commit/57e3a59f1194aa97ad3ddad99d9bd15770453d54))
+- fixed missing types issue
+  ([e6d9076](https://github.com/chore-dev/sass2ts/commit/e6d90766365a5c45ea07ad304799e8050ecf19ba))
+- fixed relative path missing prefix issue
+  ([88df1ba](https://github.com/chore-dev/sass2ts/commit/88df1badd60698c004d58f8cc9c5093e2e4107c4))
+
 ## [1.0.6](https://github.com/chore-dev/sass2ts/compare/v1.0.5...v1.0.6) (2024-06-13)
 
 ### Bug Fixes
