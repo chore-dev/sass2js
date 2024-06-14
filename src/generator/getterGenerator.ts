@@ -17,7 +17,7 @@ function getterGenerator(
         // TODO: Fill in scss path
         `import parser from '@chore-dev/sass2ts/parser';`,
         '',
-        `import variables from '${/^\/|\.\//.test(variablesPath) ? './' : ''}${variablesPath}';`,
+        `import variables from '${/^\/|\.\//.test(variablesPath) ? '' : './'}${variablesPath}';`,
         '',
         `export const get${rootName} = () => {`,
         `  return parser<${rootName}>(variables);`,
