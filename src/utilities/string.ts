@@ -14,7 +14,7 @@ export const createFileName = (options: ConfigOptions) => {
     const inputFileName = input.split('/').pop();
 
     if (inputFileName) {
-      fileName = inputFileName.replace(/\.s[ac]ss$/, extension);
+      fileName = inputFileName.replace(/\.s[ac]ss$/, '');
     }
   }
 
