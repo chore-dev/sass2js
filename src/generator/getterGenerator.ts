@@ -6,7 +6,7 @@ function getterGenerator(
   options: ConfigOptions,
   paths: Record<'inputPath' | 'outputPath', string>
 ) {
-  const { implementGetter, rootName } = options;
+  const { implementGetter, preserveString, rootName } = options;
   const { inputPath, outputPath } = paths;
 
   const outputDir = outputPath.split('/').slice(0, -1).join('/');
@@ -20,7 +20,7 @@ function getterGenerator(
         `import variables from '${/^\/|\.\//.test(variablesPath) ? '' : './'}${variablesPath}';`,
         '',
         `export const get${rootName} = () => {`,
-        `  return parser<${rootName}>(variables);`,
+        `  return parser<${rootName}>(variables, ${preserveString});`,
         '};',
         ''
       ].join('\n')
