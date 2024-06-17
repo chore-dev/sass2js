@@ -7,8 +7,4 @@ export interface ConfigOptions {
   rootName?: string;
 }
 
-export type SassRootExport = Record<string, string> & {
-  __checksum: string;
-};
-
 export type Sass2TsConfig = ConfigOptions | Array<ConfigOptions>;

@@ -1,14 +1,9 @@
-import { SassRootExport } from '../types';
-import { CHECKSUM } from '../utilities/constants';
-
 function sassParser(content: string) {
   const result: {
-    entries: SassRootExport;
+    entries: Record<string, unknown>;
     success: boolean;
   } = {
-    entries: {
-      [CHECKSUM]: `${Date.now()}`
-    },
+    entries: {},
     success: false
   };
 

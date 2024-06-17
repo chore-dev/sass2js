@@ -6,7 +6,7 @@ import { resolve } from 'path';
 import * as sass from 'sass';
 import { pathToFileURL } from 'url';
 
-import massageSassExportRoot from '../parser/sassExportRoot';
+import massageObject from '../parser/object';
 import { Sass2TsConfig } from '../types';
 import { CONFIG_FILE_NAME } from '../utilities/constants';
 import { error, lineBreak, log } from '../utilities/logger';
@@ -149,7 +149,7 @@ if (!existsSync(configFile)) {
       continue;
     }
 
-    const json = massageSassExportRoot(entries, preserveString);
+    const json = massageObject(entries, preserveString);
     const interfaces = json2ts(json, { rootName }).map(block => {
       return block.replace('interface', 'export interface');
     });
