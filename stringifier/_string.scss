@@ -1,6 +1,6 @@
 @use 'sass:meta';
 
-@use './utilities/_string';
+@use 'utilities/string';
 
 @function encode($variable) {
   $stringified: string.stringify($variable);

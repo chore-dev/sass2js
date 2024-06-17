@@ -10,7 +10,7 @@ export default [
     input: './src/index.ts',
     output: {
       compact: true,
-      file: './lib/parser/index.js',
+      file: './parser/index.js',
       format: 'esm',
       sourcemap: false
     },
@@ -20,7 +20,7 @@ export default [
     input: './src/generator/index.ts',
     output: {
       compact: true,
-      file: './lib/bin/index.js',
+      file: './bin/index.js',
       format: 'esm',
       sourcemap: false
     },

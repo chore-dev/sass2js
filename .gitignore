@@ -1,7 +1,6 @@
 # Built files
-lib/bin
-lib/parser
-/types
+/bin/index.js
+/parser
 
 # Ignore OS-Generated files
 ## macOS

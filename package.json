@@ -12,16 +12,17 @@
   "type": "module",
   "bin": "./bin/sass2ts.js",
   "main": "./index.scss",
-  "types": "./types/index.d.ts",
+  "types": "./parser/index.d.ts",
   "files": [
-    "./index.scss",
-    "./lib",
-    "./types"
+    "./bin",
+    "./parser",
+    "./stringifier",
+    "./index.scss"
   ],
   "scripts": {
-    "build": "yarn build:clean && rollup --config rollup.config.js && if [ -d ./lib/parser/types ]; then mv ./lib/parser/types ./; fi",
+    "build": "yarn build:clean && rollup --config rollup.config.js",
     "build:watch": "nodemon --watch ./src --ext ts --exec yarn build",
-    "build:clean": "rm -rf ./lib/bin ./lib/parser ./types",
+    "build:clean": "rm -rf ./bin/index.js ./parser",
     "prepare": "husky",
     "release": "release-it --config .release-it.json",
     "// ESLint": "---------- ---------- ---------- ---------- ----------",

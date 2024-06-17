@@ -12,9 +12,8 @@ const config = tsESLint.config(
       // Backup files
       '.composer.bak/',
       // Build output directory
-      'lib/bin/',
-      'lib/parser/',
-      '/types/',
+      '/bin/index.js',
+      '/parser',
       // Cache files
       '.eslintcache',
       // Config files

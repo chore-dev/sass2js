@@ -5,9 +5,8 @@ node_modules/
 .composer.bak
 
 # Build output directory
-/lib/bin
-/lib/parser
-/types
+/bin/index.js
+/parser
 
 # Build output files
 .eslintcache

@@ -1,16 +1,16 @@
 @use 'sass:meta';
 
-@use './utilities/_string' as string-utilities;
-@use './_arglist';
-@use './_bool';
-@use './_color';
-@use './_function';
-@use './_list';
-@use './_map';
+@use 'utilities/string' as string-utilities;
+@use 'arglist';
+@use 'bool';
+@use 'color';
+@use 'function';
+@use 'list';
+@use 'map';
 // NOTE: Mark n as alias of _null, seems null is a reserved keyword in SASS
-@use './_null' as n;
-@use './_number';
-@use './_string';
+@use 'null' as n;
+@use 'number';
+@use 'string';
 
 @function stringifier($variable) {
   @if (meta.type-of($variable) == 'arglist') {

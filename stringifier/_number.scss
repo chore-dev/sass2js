@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@use './_string';
+@use 'string';
 
 @function stringifier($variable) {
   @return if(math.is-unitless($variable), $variable, string.stringifier($variable));

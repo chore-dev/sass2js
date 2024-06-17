@@ -1,4 +1,4 @@
-@use './_list';
+@use 'list';
 
 @function stringifier($variable, $parser) {
   @return list.stringifier($variable, $parser);

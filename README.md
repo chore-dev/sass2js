@@ -57,7 +57,7 @@ Below is an example of how to export values in Sass:
 // variables.module.scss
 
 @use 'sass:meta';
-@use '@chore-dev/sass2ts/lib/stringifier' as sass2ts;
+@use '@chore-dev/sass2ts/stringifier' as sass2ts;
 
 @function function-example() {
   @return 'this is a example function';
@@ -118,7 +118,7 @@ Below is an example of how to export values in Sass:
 > NOTE: Read the [sass2ts.config.js](#sass2tsconfigjs) section for more information
 
 ```javascript
-/** @type {import("@chore-dev/sass2ts/types/types").ConfigOptions} */
+/** @type {import("@chore-dev/sass2ts/parser/types").ConfigOptions} */
 
 const config = {
   implementGetter: true,

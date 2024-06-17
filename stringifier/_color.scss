@@ -1,6 +1,6 @@
 @use 'sass:meta';
 
-@use './_string';
+@use 'string';
 
 @function stringifier($variable) {
   @return string.stringifier($variable);
