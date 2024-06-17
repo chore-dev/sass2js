@@ -1,10 +1,10 @@
 {
-  "exclude": [".composer.bak", "node_modules", "build", "lib/bin", "lib/js"],
-  "include": ["**/*.d.ts", "**/*.js", "**/*.ts", "types"],
+  "exclude": [".composer.bak", "node_modules", "./lib/bin", "./lib/js", "./types"],
+  "include": ["**/*.d.ts", "**/*.js", "**/*.ts"],
   "compilerOptions": {
     "skipLibCheck": true,
     "declaration": true,
-    "declarationDir": "./lib/js",
+    "declarationDir": "types",
     "declarationMap": false,
     "importHelpers": true,
     "noEmit": false,

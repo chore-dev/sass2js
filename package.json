@@ -17,7 +17,7 @@
     },
     "./parser": {
       "import": "./lib/js/index.js",
-      "types": "./lib/js/index.d.ts",
+      "types": "./types/index.d.ts",
       "default": "./lib/js/index.js"
     },
     "./stringifier": {
@@ -25,15 +25,16 @@
     }
   },
   "main": "./index.scss",
-  "types": "./lib/js/index.d.ts",
+  "types": "./types/index.d.ts",
   "files": [
     "./index.scss",
-    "lib",
-    "types"
+    "./lib",
+    "./types"
   ],
   "scripts": {
-    "build": "rollup --config rollup.config.js",
+    "build": "yarn build:clean && rollup --config rollup.config.js && if [ -d ./lib/js/types ]; then mv ./lib/js/types ./; fi",
     "build:watch": "nodemon --watch ./src --ext ts --exec yarn build",
+    "build:clean": "rm -rf ./lib/bin ./lib/js ./types",
     "prepare": "husky",
     "release": "release-it --config .release-it.json",
     "// ESLint": "---------- ---------- ---------- ---------- ----------",

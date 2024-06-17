@@ -1,6 +1,7 @@
 # Built files
 lib/bin
 lib/js
+/types
 
 # Ignore OS-Generated files
 ## macOS
