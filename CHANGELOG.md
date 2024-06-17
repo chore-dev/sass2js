@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.9](https://github.com/chore-dev/sass2ts/compare/v1.0.8...v1.0.9) (2024-06-17)
+
+### Bug Fixes
+
+- fixed missing external in rollup
+  ([f86e96d](https://github.com/chore-dev/sass2ts/commit/f86e96dab3a9271b60b8fdca5c35e43d11ac10b2))
+
+### Restructured
+
+- relocate and renamed global type file
+  ([ab3b168](https://github.com/chore-dev/sass2ts/commit/ab3b16819b67aa0b0f7adb219ec964d094f571ce))
+- renamed implementGetters with implementGetter
+  ([9d71824](https://github.com/chore-dev/sass2ts/commit/9d718243108223f44750548928d0360c3c7ef67e))
+- updated cli --config alias to -C
+  ([6ee5fe0](https://github.com/chore-dev/sass2ts/commit/6ee5fe0a11d4d2b72f79e75eff3626c93b0efbde))
+
 ## [1.0.8](https://github.com/chore-dev/sass2ts/compare/v1.0.7...v1.0.8) (2024-06-14)
 
 ### Bug Fixes
