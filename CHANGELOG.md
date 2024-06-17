@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/chore-dev/sass2ts/compare/v1.0.9...v1.0.10) (2024-06-17)
+
+### Restructured
+
+- skipped unnecessary checkings
+  ([970c721](https://github.com/chore-dev/sass2ts/commit/970c721c7a9baa6f811bb03d57a7dae822bbc9b7))
+
 ## [1.0.9](https://github.com/chore-dev/sass2ts/compare/v1.0.8...v1.0.9) (2024-06-17)
 
 ### Bug Fixes
