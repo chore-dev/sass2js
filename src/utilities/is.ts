@@ -1,4 +1,4 @@
-import { SassRootExport } from '../../types';
+import { SassRootExport } from '../types';
 
 import { CHECKSUM, SASS2TS_JSON } from './constants';
 

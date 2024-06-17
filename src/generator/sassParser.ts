@@ -1,4 +1,4 @@
-import { SassRootExport } from '../../types';
+import { SassRootExport } from '../types';
 import { CHECKSUM } from '../utilities/constants';
 
 function sassParser(content: string) {

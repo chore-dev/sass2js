@@ -1,4 +1,4 @@
-import { SassRootExport } from '../../types';
+import { SassRootExport } from '../types';
 import { CHECKSUM } from '../utilities/constants';
 import { isString, isStringifiedSass2TsJson } from '../utilities/is';
 import { transpile, unescape } from '../utilities/values';

@@ -1,6 +1,6 @@
 import { relative } from 'path';
 
-import { ConfigOptions } from '../../types';
+import { ConfigOptions } from '../types';
 
 function getterGenerator(
   options: ConfigOptions,

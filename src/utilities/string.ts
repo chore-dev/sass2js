@@ -1,4 +1,4 @@
-import { ConfigOptions } from '../../types';
+import { ConfigOptions } from '../types';
 
 import { NAMESPACE_LOWERCASE } from './constants';
 

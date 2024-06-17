@@ -6,8 +6,8 @@ import { resolve } from 'path';
 import * as sass from 'sass';
 import { pathToFileURL } from 'url';
 
-import { Sass2TsConfig } from '../../types';
 import massageSassExportRoot from '../parser/sassExportRoot';
+import { Sass2TsConfig } from '../types';
 import { CONFIG_FILE_NAME } from '../utilities/constants';
 import { error, lineBreak, log } from '../utilities/logger';
 import { createFileName } from '../utilities/string';
