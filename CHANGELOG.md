@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.15](https://github.com/chore-dev/sass2ts/compare/v1.0.14...v1.0.15) (2024-06-17)
+
+### Bug Fixes
+
+- fixed incorrect import when generating get fn
+  ([d9be574](https://github.com/chore-dev/sass2ts/commit/d9be5740803d96692f804b84e7694363efea0106))
+
 ## [1.0.14](https://github.com/chore-dev/sass2ts/compare/v1.0.13...v1.0.14) (2024-06-17)
 
 ### Restructured
