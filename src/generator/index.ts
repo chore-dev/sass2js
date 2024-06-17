@@ -49,7 +49,7 @@ if (!existsSync(configFile)) {
 
     const options = Object.assign(
       {
-        implementGetters: true,
+        implementGetter: true,
         preserveString: false,
         rootName: 'SassVariables'
       },
@@ -62,7 +62,7 @@ if (!existsSync(configFile)) {
       continue;
     }
 
-    const { implementGetters, input, outputDir, preserveString, rootName } = options;
+    const { implementGetter, input, outputDir, preserveString, rootName } = options;
     const inputPath = PWD(input);
 
     if (!input || !existsSync(inputPath)) {
@@ -86,7 +86,7 @@ if (!existsSync(configFile)) {
       `| Input              : ${inputPath}`,
       `| Output             : ${outputPath}`,
       `| Root interface name: ${rootName}`,
-      `| Implement getter?  : ${implementGetters}`,
+      `| Implement getter?  : ${implementGetter}`,
       `| Preserve string?   : ${preserveString}`,
       `----- ----- ----- ----- ----- ----- ----- ----- ----- -----`
     ]);

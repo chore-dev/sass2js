@@ -3,8 +3,8 @@ import { ConfigOptions } from '../types';
 import { NAMESPACE_LOWERCASE } from './constants';
 
 export const createFileName = (options: ConfigOptions) => {
-  const { implementGetters, input, output = '' } = options;
-  const extension = implementGetters ? '.ts' : '.d.ts';
+  const { implementGetter, input, output = '' } = options;
+  const extension = implementGetter ? '.ts' : '.d.ts';
 
   // Try to use user-defined output file name
   let fileName = output.replace(/\.(d\.)?ts$/, '');

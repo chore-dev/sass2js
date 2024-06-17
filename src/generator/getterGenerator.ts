@@ -6,13 +6,13 @@ function getterGenerator(
   options: ConfigOptions,
   paths: Record<'inputPath' | 'outputPath', string>
 ) {
-  const { implementGetters, rootName } = options;
+  const { implementGetter, rootName } = options;
   const { inputPath, outputPath } = paths;
 
   const outputDir = outputPath.split('/').slice(0, -1).join('/');
   const variablesPath = relative(outputDir, inputPath);
 
-  return implementGetters
+  return implementGetter
     ? [
         // TODO: Fill in scss path
         `import parser from '@chore-dev/sass2ts/parser';`,
