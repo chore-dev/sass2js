@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.14](https://github.com/chore-dev/sass2ts/compare/v1.0.13...v1.0.14) (2024-06-17)
+
+### Restructured
+
+- updated export strategy
+  ([2d182ae](https://github.com/chore-dev/sass2ts/commit/2d182ae6faa6c7e292029f541ed76de8b85310d5))
+
 ## [1.0.13](https://github.com/chore-dev/sass2ts/compare/v1.0.12...v1.0.13) (2024-06-17)
 
 ### Restructured
