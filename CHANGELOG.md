@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.13](https://github.com/chore-dev/sass2ts/compare/v1.0.12...v1.0.13) (2024-06-17)
+
+### Restructured
+
+- updated output directory from /js to /parser
+  ([cba36e9](https://github.com/chore-dev/sass2ts/commit/cba36e9f095c6b7164680a4d49684d3c7ff6d338))
+
 ## [1.0.12](https://github.com/chore-dev/sass2ts/compare/v1.0.11...v1.0.12) (2024-06-17)
 
 ## [1.0.11](https://github.com/chore-dev/sass2ts/compare/v1.0.10...v1.0.11) (2024-06-17)
