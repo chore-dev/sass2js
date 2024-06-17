@@ -11,19 +11,6 @@
   ],
   "type": "module",
   "bin": "./bin/sass2ts.js",
-  "exports": {
-    ".": {
-      "sass": "./index.scss"
-    },
-    "./parser": {
-      "import": "./lib/js/index.js",
-      "types": "./types/index.d.ts",
-      "default": "./lib/js/index.js"
-    },
-    "./stringifier": {
-      "sass": "./index.scss"
-    }
-  },
   "main": "./index.scss",
   "types": "./types/index.d.ts",
   "files": [

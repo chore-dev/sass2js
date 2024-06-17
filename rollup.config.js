@@ -10,7 +10,7 @@ export default [
     input: './src/index.ts',
     output: {
       compact: true,
-      file: './lib/js/index.js',
+      file: './lib/parser/index.js',
       format: 'esm',
       sourcemap: false
     },
