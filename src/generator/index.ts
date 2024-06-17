@@ -11,8 +11,8 @@ import { Sass2TsConfig } from '../types';
 import { CONFIG_FILE_NAME } from '../utilities/constants';
 import { error, lineBreak, log } from '../utilities/logger';
 import { createFileName } from '../utilities/string';
-import getterGenerator from './getterGenerator';
 
+import getterGenerator from './getterGenerator';
 import sassParser from './sassParser';
 
 const PWD = (path: string = '') => resolve(process.cwd(), path);
