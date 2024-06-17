@@ -6,7 +6,7 @@ node_modules/
 
 # Build output directory
 /lib/bin
-/lib/js
+/lib/parser
 /types
 
 # Build output files

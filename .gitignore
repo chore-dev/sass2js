@@ -1,6 +1,6 @@
 # Built files
 lib/bin
-lib/js
+lib/parser
 /types
 
 # Ignore OS-Generated files

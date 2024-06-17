@@ -1,5 +1,5 @@
 {
-  "exclude": [".composer.bak", "node_modules", "./lib/bin", "./lib/js", "./types"],
+  "exclude": [".composer.bak", "node_modules", "./lib/bin", "./lib/parser", "./types"],
   "include": ["**/*.d.ts", "**/*.js", "**/*.ts"],
   "compilerOptions": {
     "skipLibCheck": true,
@@ -8,7 +8,7 @@
     "declarationMap": false,
     "importHelpers": true,
     "noEmit": false,
-    "outDir": "./lib/js",
+    "outDir": "./lib/parser",
     "removeComments": true,
     "sourceMap": false,
     "allowSyntheticDefaultImports": true,

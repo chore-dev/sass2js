@@ -57,7 +57,7 @@ Below is an example of how to export values in Sass:
 // variables.module.scss
 
 @use 'sass:meta';
-@use '@chore-dev/sass2ts/stringifier' as sass2ts;
+@use '@chore-dev/sass2ts/lib/stringifier' as sass2ts;
 
 @function function-example() {
   @return 'this is a example function';

@@ -19,9 +19,9 @@
     "./types"
   ],
   "scripts": {
-    "build": "yarn build:clean && rollup --config rollup.config.js && if [ -d ./lib/js/types ]; then mv ./lib/js/types ./; fi",
+    "build": "yarn build:clean && rollup --config rollup.config.js && if [ -d ./lib/parser/types ]; then mv ./lib/parser/types ./; fi",
     "build:watch": "nodemon --watch ./src --ext ts --exec yarn build",
-    "build:clean": "rm -rf ./lib/bin ./lib/js ./types",
+    "build:clean": "rm -rf ./lib/bin ./lib/parser ./types",
     "prepare": "husky",
     "release": "release-it --config .release-it.json",
     "// ESLint": "---------- ---------- ---------- ---------- ----------",

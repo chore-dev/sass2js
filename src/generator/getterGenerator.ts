@@ -14,8 +14,7 @@ function getterGenerator(
 
   return implementGetter
     ? [
-        // TODO: Fill in scss path
-        `import parser from '@chore-dev/sass2ts/parser';`,
+        `import parser from '@chore-dev/sass2ts/lib/parser';`,
         '',
         `import variables from '${/^\/|\.\//.test(variablesPath) ? '' : './'}${variablesPath}';`,
         '',
