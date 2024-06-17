@@ -21,7 +21,7 @@ const options = commandLineArgs([
   {
     defaultValue: `./${CONFIG_FILE_NAME}`,
     name: 'config',
-    alias: 'c',
+    alias: 'C',
     type: String
   }
 ]);
