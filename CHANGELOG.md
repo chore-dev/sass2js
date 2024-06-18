@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.16](https://github.com/chore-dev/sass2ts/compare/v1.0.15...v1.0.16) (2024-06-18)
+
 ## [1.0.15](https://github.com/chore-dev/sass2ts/compare/v1.0.14...v1.0.15) (2024-06-17)
 
 ### Bug Fixes
