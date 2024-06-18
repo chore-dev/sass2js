@@ -118,16 +118,18 @@ Below is an example of how to export values in Sass:
 > NOTE: Read the [sass2ts.config.js](#sass2tsconfigjs) section for more information
 
 ```javascript
-/** @type {import("@chore-dev/sass2ts/parser/types").ConfigOptions} */
+/** @type {import("@chore-dev/sass2ts/parser/types").Sass2TsConfig} */
 
-const config = {
-  implementGetter: true,
-  input: './path/to/variables.module.scss',
-  output: 'fooBar', // No extension needed
-  outputDir: './path/of/output/dir',
-  preserveString: false,
-  rootName: 'FooBar'
-};
+const config = [
+  {
+    implementGetter: true,
+    input: './path/to/variables.module.scss',
+    output: 'fooBar', // No extension needed
+    outputDir: './path/of/output/dir',
+    preserveString: false,
+    rootName: 'FooBar'
+  }
+];
 ```
 
 - If "type": "module" in package.json
